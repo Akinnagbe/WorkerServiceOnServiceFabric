@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  workerserviceonservicefabric:
+    deploy:
+      replicas:10
+    image: ${DOCKER_REGISTRY-}workerserviceonservicefabric
+    build:
+      context: .
+      dockerfile: WorkerServiceOnServiceFabric/Dockerfile
